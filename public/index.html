@@ -1,35 +1,27 @@
-<!-- <-c!DOCTYPE html>
-<html lang="en" dir='litr'>
-    <head>
-        <title>Burger Title</title>
-        <meta charset="utf-8"/>
-	<link rel="stylesheet" href="css/master.css">
-	<script type="text/javascript" src="js/script.js" defer></script>
-    </head>
-    <body>
-      <div id="wrapper">
-	<div class="box a">A</div>
-	<div class="box b">B</div>
-	<div class="box c">C</div>
-	<div class="box d">D</div>
-	</div>
-    </body>
-</html>
--->
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Burger order</title>
         <meta charset="utf-8"/>
-    </head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/js_script.js"> defer></script>
+	<script src="https://vuejs.org/js/vue.js" defer></script>
+	<script src="js/vue_script.js" defer></script>
+	
+	  
+	</head>
     <body>
-	<h1>Välkommen till BurgerOnline</h1>
+      <main id="vue">
+      <section class= 'header'>
+	<h1 id= 'covertext'>Välkommen till BurgerOnline</h1>
+	<img id='burgercover' src='burger.jpg'>
+      </section>
+      <section class='intro'>
       
       <h2>Select Burger</h2>
-	<p>Here you will pick burger</p>
+      <div id="myID">{{arbitraryVariableName}}</div>
 
-	<table>
+	<table class="center">
     <thead>
         <tr>
             <th>McBurg</th>
@@ -44,42 +36,39 @@
 	  <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/NYC-Diner-Bacon-Cheeseburger.jpg/716px-NYC-Diner-Bacon-Cheeseburger.jpg" alt="Span" title="Burger 3" width='200'</td>
 		   </tr>
 	<tr>
-	  <td><dl>
-    <dt>Taste:</dt>
-    <dd>Great</dd>
-
-    <dt>Allergies:</dt>
-    <dd>Some</dd>
-	    </dl>
+	  <td>
+	    <ul>
+    <li><p>Brödet innehåller<section class="allergy">gluten</section></p></li>
+    <li><p>Det finns<section class="allergy">laktos</section> i såsen </p></li>
+    <li>Good taste</li>
+	    </ul>
 	  </td>
-	  <td><dl>
-    <dt>Taste:</dt>
-    <dd>So-so</dd>
-
-    <dt>Allergies:</dt>
-    <dd>All</dd></dl></td>
-	  <td><dl>
-    <dt>Taste:</dt>
-    <dd>Nah</dd>
-
-    <dt>Allergies:</dt>
-    <dd>Nah</dd></dl></td>
+	  <td>
+	    <ul>
+    <li><p>Brödet innehåller<section class="allergy">gluten</section></p></li>
+     <li><p>Det finns<section class="allergy">laktos</section> i såsen </p></li>
+    <li>Good taste</li></td>
+	  <td>
+	    <ul>
+    <li><p>Brödet innehåller<section class="allergy">gluten</section></p></li>
+    <li><p>Det finns<section class="allergy">laktos</section> i såsen </p></li>
+    <li>Good taste</li></td>
 
     </tbody>
 
 	</table>
-	
-<section id= "custinformation">
-      <h2>Customer Information</h2>
+	</section>
+<section class= "custinformation">
+  <h2>Customer Information</h2>
+  
 	<p>Customer info here</p>
-</section
 
 
- <section id= "contactform">
+
+<section id="contact">
   <h2>Contact</h2>
-  <main>
-    <section id="contact">
-      <form>
+  
+        <form>
 	<p>
     <label for="firslasttname">Full name</label><br>
     <input type="text" id="firstname" name="fln" required="required" placeholder="First- and Last name">
@@ -105,7 +94,7 @@
         <option>Norwegian air stocks</option>
     </select>
 </p>
-	
+</section>
 	  
 	  
 
@@ -115,7 +104,9 @@
       </form>
       <button type="submit"><img src="https://miro.medium.com/max/3200/1*gMxks8DvPMTwoiW-FLdGiA.jpeg" width="80"> Order</button>
     </section>
-</main>
+  </main>
+
+
 	
           <footer>BURGERTOWN INC</footer>
     </body>
