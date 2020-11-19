@@ -1,0 +1,115 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 2.4vh;
+    background-color: gray;
+    /*max-width: 1000px;*/
+    margin: auto;
+}
+
+#meny {
+     display: grid;
+     grid-gap:10px;
+     grid-template-columns: 33% 33% 33%;
+     
+     
+     /*background-color: #fff;
+     color: #444;*/
+}
+
+.burger {
+     /*background-color: #444;
+     color: #fff;*/
+    border-radius: 5px;
+    padding: 20px;
+    
+    
+
+
+ 
+
+}
+.burgarbild {
+    width: 60%;
+}
+
+
+.allergy {
+    color: #ff5500;
+    border: 2px dotted #ff9900;
+    nt-weight:bold;
+}
+
+
+
+button:hover {
+    cursor:crosshair
+}
+
+
+/*table {
+    color: white;
+    width: 85%;
+  border: 10px solid black;
+  align-items: center;
+  justify-content: center;
+  background-color: black*/
+  
+}
+
+
+/*table.center {
+    margin-left:auto; 
+    margin-right:auto;
+    margin-top:auto;
+  }
+
+/*section {
+    margin: 10px 10px 10px 10px;
+    padding: 1px 23px 4px;*/
+    
+		
+}
+
+
+.header {
+    color: black;
+    height:5%;
+    overflow:hidden;
+			  
+}
+#covertext {
+    position:absolute;
+    font-size:500%;
+   
+}
+
+#burgercover {
+    opacity: 0.5;
+    width: 100%;
+    height: 50%;
+}
+
+.orderspace {
+    color: white;
+    border: 10px solid red;
+    text-align: center; 
+    background-color: black;
+
+}
+.custinformation {
+    border: 10px dashed black;
+    color: black;
+    text-align: left;
+    background-color: white;
+
+
+td img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+
