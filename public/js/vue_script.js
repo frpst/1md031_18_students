@@ -28,11 +28,15 @@
 var vm = new Vue({
     el: '#themenu',
     data: { customerDetails: [],
-            food},
+            food,
+            checkBurgers: [],
+            hasordered: false},
     methods: {
         addOrder: function (event) {
+            this.hasordered = true;
             this.customerDetails = valueReader();
             console.log(customerDetails);
+            
         }
     }
             
