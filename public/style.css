@@ -35,11 +35,16 @@ body {
 
 
 .allergy {
-    color: #ff5500;
-    border: 2px dotted #ff9900;
-    nt-weight:bold;
+
+    font-weight:bold;
+}
+#form {
+    margin: 2em;
 }
 
+#orderbutton {
+    margin: 2em;
+}
 
 
 button:hover {
@@ -104,16 +109,36 @@ button:hover {
 .custinformation {
     border: 10px dashed black;
     color: black;
-    text-align: left;
+    /*text-align: left;*/
     background-color: white;
     margin:10px;
+}
 
+.custinformation h2 {
+    margin-left: 20px;
+    
+}
+
+.custinformation h3 {
+    margin-left: 20px;
+}
+
+
+        
 
 td img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     
+}
+
+#formet {
+    margin:10em;
+}
+
+.currentOrder {
+    margin-left: 10%;
 }
 
 

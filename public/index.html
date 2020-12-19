@@ -25,8 +25,8 @@
 	  <div class= "burger" v-for='menuitem in food'><h3>{{menuitem.name}}</h3>
 	    <img class="burgarbild" :src = "menuitem.img">
 	    <li>{{menuitem.kCal}} kcal</li>
-	    <li v-if='menuitem.lactose'>Lactose</li>
-	    <li v-if='menuitem.gluten'>Gluten</li>
+	    <li class="allergy" v-if='menuitem.lactose'>Lactose</li>
+	    <li class="allergy" v-if='menuitem.gluten'>Gluten</li>
             <ul><input type="checkbox" :value="menuitem.name"  v-model="checkBurgers"></ul>            
 
 	  </div>
@@ -35,12 +35,16 @@
       </section>
 	
 <section class= "custinformation">
-  <h2>Customer Information</h2>
   
-  <p>Customer info here</p>
+  
+ 
     
 
-  <h2>Contact</h2>
+  
+
+ 
+  
+  <h2>Enter your contact information:</h2>
   <form id='form'>
     <p>
       <label for="firstlastname">Full name</label><br>
@@ -74,19 +78,19 @@
     <input type="radio" id="other" name="gender" value="other">
     <label for="other">Other answer</label>
   </form>
+  
 
-  <button type='orderbutton' v-on:click="addOrder()" type="submit"><img src="https://miro.medium.com/max/3200/1*gMxks8DvPMTwoiW-FLdGiA.jpeg" width="80">Order</button>
+  <button id='orderbutton' v-on:click="addOrder()" type="submit"><img src="https://miro.medium.com/max/3200/1*gMxks8DvPMTwoiW-FLdGiA.jpeg" width="80">Order</button>
 
 
-
-<h1>current order:</h1>
+<h2 v-if='hasordered'>Current order:</h2>
 
 <h2 v-if='hasordered'>Your information:</h2>
 <div v-for='order in customerDetails'><h3>{{ order }}</h3></div>
 
 <h2 v-if='hasordered'>Your BURGERS:</h2>
-<div v-for='checkedBurger in checkBurgers'><h3>{{ checkedBurger }}</h2>
-
+<div v-if='hasordered' v-for='checkedBurger in checkBurgers'><h3>{{ checkedBurger }}</h2>
+</div>
 
 </section>
 
