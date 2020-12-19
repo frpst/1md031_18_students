@@ -4,114 +4,90 @@
         <title>Burger order</title>
         <meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="js/js_script.js"> defer></script>
 	<script src="https://vuejs.org/js/vue.js" defer></script>
 	<script src="js/vue_script.js" defer></script>
+        <script src="js/js_script.js"> defer></script>
+	<script type="text/javascript" src="menu.js"></script>.
     </head>
-
     <body>
-      
       <section class= 'header'>
 	<h1 id= 'covertext'>Välkommen till BurgerOnline</h1>
 	<img id='burgercover' src='burger.jpg'>
       </section>
-      <section class='orderspace'>
+      
 	
 	<h2>Select Burger</h2>
-	<main id="vue">
-      <div id="myID">{{arbitraryVariableName}}</div>
-     <!-- <div class="wrapper">-->
+	<main id="themenu">
+          <section class='orderspace'>
+ 
 	<div id='meny'>
-	  <div class= "burger" v-for='menuitem in menu'><h3>{{menuitem.name()}}</h3>
-	    <img class="burgarbild" :src = "menuitem.image()">
-	    <li>{{menuitem.kcal()}} kcal</li>
-	    <li v-if='menuitem.lactose()'>Lactose</li>
-	    <li v-if='menuitem.gluten()'>Gluten</li>
+	  <div class= "burger" v-for='menuitem in food'><h3>{{menuitem.name}}</h3>
+	    <img class="burgarbild" :src = "menuitem.img">
+	    <li>{{menuitem.kCal}} kcal</li>
+	    <li v-if='menuitem.lactose'>Lactose</li>
+	    <li v-if='menuitem.gluten'>Gluten</li>
 	  </div>
 	</div>
-     <!-- </div>-->
+  
       </section>
-	<!--<div class="burger">
-	  <h3>McBurg</h3>
-	  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Big_Mac_hamburger.jpg" alt="Span" title="Red burger" width="200">
-    <li><p>Brödet innehåller<section class="allergy">gluten</section></p></li>
-    <li><p>Det finns<section class="allergy">laktos</section> i såsen </p></li>
-	  <li>Good taste</li></div>
-
-<div class="burger">
-		    <h3>"Borgy time!"</h3>
-		    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/RedDot_Burger.jpg/800px-RedDot_Burger.jpg" alt="Span" title="Burger 2" width='200'>
-		    <li><p>Brödet innehåller<section class="allergy">gluten</section></p></li>
-     <li><p>Det finns<section class="allergy">laktos</section>i såsen</p></li>
-    <li>Good taste</li>
-	  
-	    </div>
-
-<div class="burger">
-  <h3>Feaster, Burger Style</h3>
-	     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/NYC-Diner-Bacon-Cheeseburger.jpg/716px-NYC-Diner-Bacon-Cheeseburger.jpg" alt="Span" title="Burger 3" width='200'
-		  <li><p>Brödet innehåller<section class="allergy">gluten</section></p></li>
-	     <li><p>Det finns<section class="allergy">laktos</section> i såsen </p></li>
-	     <li>Good taste</li>
-	     </div>
-</div>-->
 	
 <section class= "custinformation">
   <h2>Customer Information</h2>
   
   <p>Customer info here</p>
     
- 
 
-<section id="contact">
   <h2>Contact</h2>
-  
-        <form>
-	<p>
-    <label for="firslasttname">Full name</label><br>
-    <input type="text" id="firstname" name="fln" required="required" placeholder="First- and Last name">
-</p>
-<p>
-    <label for="email">E-mail</label><br>
-    <input type="email" id="email" name="em" placeholder="E-mail adress">
-</p>
-	<p>
-	  <label for="street">Street</label><br>
-    <input type="text" id="Street" name="st" required="required" placeholder="Street name">
-</p>
-	<p>
-	  <label for="house">House</label><br>
-	  <input type="text" id="house" name="h" required="required" placeholder="House number"></p>
-
-<p>
-    <label for="payment">Payment method</label><br>
-    <select id="payment" name="pay">
-        <option selected="selected">Cash</option>
+  <form id='form'>
+    <p>
+      <label for="firstlastname">Full name</label><br>
+      <input type="text" id="firstname" name="fln" required="required" placeholder="First- and Last name">
+    </p>
+    <p>
+      <label for="email">E-mail</label><br>
+      <input type="email" id="email" name="em" placeholder="E-mail adress">
+    </p>
+    <p>
+      <label for="street">Street</label><br>
+      <input type="text" id="Street" name="st" required="required" placeholder="Street name">
+    </p>
+    <p>
+      <label for="house">House</label><br>
+      <input type="text" id="house" name="h" required="required" placeholder="House number"></p>
+    <p>
+      <label for="payment">Payment method</label><br>
+      <select id="payment" name="pay">
+	<option selected="selected">Cash</option>
         <option>Bitcoin</option>
         <option>Nintendo Points</option>
         <option>Norwegian air stocks</option>
-    </select>
-</p>
+      </select>
+    </p>
+
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other answer</label>
+  </form>
+
+  <button type='orderbutton' v-on:click="addOrder()" type="submit"><img src="https://miro.medium.com/max/3200/1*gMxks8DvPMTwoiW-FLdGiA.jpeg" width="80">Order</button>
+
+
+
+<h1>current order:</h1>
+
+<div v-for='order in customerDetails'><h3>{{ order }}</h3></div>
+
 </section>
-	  
-	  
 
-        
-	  
-
-      </form>
-      <button type="submit"><img src="https://miro.medium.com/max/3200/1*gMxks8DvPMTwoiW-FLdGiA.jpeg" width="80"> Order</button>
-    </section>
-      </main>
+</main>
 
 
 
 
+<footer>BURGERTOWN INC</footer>
 
-
-
-
-	
-          <footer>BURGERTOWN INC</footer>
-    </body>
+</body>
 </html>
