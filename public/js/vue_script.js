@@ -34,9 +34,7 @@ var vm = new Vue({
             food,
             checkBurgers: [],
             hasordered: false,
-            count: 0,
-            ordernr: "",
-            orders: {}
+            orders: {},
           },
 
     methods: {
@@ -44,11 +42,12 @@ var vm = new Vue({
         addOrder: function (event) {
             this.hasordered = true;
             this.customerDetails = valueReader();
-            
-            console.log(customerDetails);
-            var deliveryLocation = this.orders.T.details;
-            
-            socket.emit("addOrder", {details: deliveryLocation,
+            console.log(this.orders.T.details);
+            console.log(this.customerDetails);
+            console.log(this.checkBurgers);
+            /*var deliveryLocation = this.orders.T.details; */
+            console.log(this.orders.T.details);
+            socket.emit("addOrder", {details: this.orders.T.details,
                                      orderItems: this.checkBurgers,
                                      customerInformation: this.customerDetails});
             
@@ -62,15 +61,17 @@ var vm = new Vue({
             var T = {x: event.currentTarget.getBoundingClientRect().left,
                      y: event.currentTarget.getBoundingClientRect().top
                     };
-            this.orders = {
-                "T": {
-                    details: {x: event.clientX - 10 - T.x,
-                              y: event.clientY - 10 - T.y
-                             }
-                             
+            this.orders = {"T": {
+                details: {
+                    x: event.clientX - 10 - T.x,
+                    y: event.clientY - 10 - T.y
                 }
-            }; 
-        }
+            }
+               
+                          };
+             
+        },
+    
     }
 });
 

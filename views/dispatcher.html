@@ -10,10 +10,26 @@
   <script src="js/dispatcher.js" defer></script>
 </head>
 <body>
-  <div id="orders">
+<!--  <div id="orders">
     <div id="orderList">
       <div v-for="(order, key) in orders">
         #{{ key }}: {{ order.orderItems.join(", ") }}
+      </div>
+    </div>
+    <div id="dots">
+        <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+          {{ key }}
+        </div>
+    </div>
+</div>-->
+ <div id="orders">
+    <div id="orderList">
+      <div v-for="(order, key) in orders">
+        #{{ key }}: 1 x {{ order.orderItems.join(", 1 x ") }} <br>
+        <br>
+        Ordered by: {{ order.customerInformation.join(", ") }}<br>
+        Deliver to: X: {{ order.details.x }} // Y: {{order.details.y}}
+        <hr>
       </div>
     </div>
     <div id="dots">
