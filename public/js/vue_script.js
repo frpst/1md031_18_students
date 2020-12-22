@@ -32,7 +32,7 @@ var vm = new Vue({
 
     data: { customerDetails: [],
             food,
-            checkBurgers: [],
+            chosenBurgers: [],
             hasordered: false,
             orders: {},
             ordernr: 0,
@@ -50,12 +50,12 @@ var vm = new Vue({
             this.customerDetails = valueReader();
             console.log(this.orders.T.details);
             console.log(this.customerDetails);
-            console.log(this.checkBurgers);
+            console.log(this.chosenBurgers);
             /*var deliveryLocation = this.orders.T.details; */
             console.log(this.orders.T.details);
             socket.emit("addOrder", {orderId: this.getNext(),
                                      details: this.orders.T.details,
-                                     orderItems: this.checkBurgers,
+                                     orderItems: this.chosenBurgers,
                                      customerInformation: this.customerDetails});
             
             

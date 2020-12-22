@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Burger order</title>
+        <t»itle>Burger order</title>
         <meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="css/deli-very.css">
@@ -30,7 +30,7 @@
 	    <li>{{menuitem.kCal}} kcal</li>
 	    <li class="allergy" v-if='menuitem.lactose'>Lactose</li>
 	    <li class="allergy" v-if='menuitem.gluten'>Gluten</li>
-            <ul><input type="checkbox" :value="menuitem.name"  v-model="checkBurgers"></ul>            
+            <ul><input type="checkbox" :value="menuitem.name"  v-model="chosenBurgers"></ul>            
 
 	  </div>
 	</div>
@@ -99,7 +99,7 @@
 <div v-for='order in customerDetails'><h3>{{ order }}</h3></div>
 
 <h2 v-if='hasordered'>Your BURGERS:</h2>
-<div v-if='hasordered' v-for='checkedBurger in checkBurgers'><h3>{{ checkedBurger }}</h2>
+<div v-if='hasordered' v-for='chosenBurger in chosenBurgers'><h3>{{ chosenBurger }}</h2>
 </div>
 
 </section>
