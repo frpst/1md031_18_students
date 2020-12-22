@@ -35,11 +35,17 @@ var vm = new Vue({
             checkBurgers: [],
             hasordered: false,
             orders: {},
+            ordernr: 0,
           },
 
     methods: {
+         getNext: function() {
+      this.ordernr += 1;
+             return this.ordernr;
+         },
 
         addOrder: function (event) {
+
             this.hasordered = true;
             this.customerDetails = valueReader();
             console.log(this.orders.T.details);
@@ -47,7 +53,8 @@ var vm = new Vue({
             console.log(this.checkBurgers);
             /*var deliveryLocation = this.orders.T.details; */
             console.log(this.orders.T.details);
-            socket.emit("addOrder", {details: this.orders.T.details,
+            socket.emit("addOrder", {orderId: this.getNext(),
+                                     details: this.orders.T.details,
                                      orderItems: this.checkBurgers,
                                      customerInformation: this.customerDetails});
             
