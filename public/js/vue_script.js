@@ -28,7 +28,7 @@
 var socket = io();
 
 var vm = new Vue({
-    el: '#themenu',
+    el: '#vue',
 
     data: { customerDetails: [],
             food,

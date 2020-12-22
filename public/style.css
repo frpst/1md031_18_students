@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 2.4vh;
-    background-color: gray;
+    background-color: grey;
     /*max-width: 1000px;*/
     margin: auto;
 }
@@ -110,7 +110,7 @@ button:hover {
     border: 10px dashed black;
     color: black;
     /*text-align: left;*/
-    background-color: white;
+    background-color: #cbcbcb;
     margin:10px;
 }
 

@@ -9,9 +9,7 @@ Before you submit the final version of your labs, make sure that your project fu
 ## 01 Git
 
 - [X] Fork and clone the 1md032_18_students repository
-Bajs
-Bajs
-Bajs
+
 ## 02 HTML
 
 Create an index.html file which contains:
