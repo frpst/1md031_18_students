@@ -1,0 +1,24 @@
+var food = [
+
+    
+    { "name": "McBurg",
+  "kCal": 3650,
+  "lactose": true,
+  "gluten": false,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Big_Mac_hamburger.jpg"
+    }
+    ,
+    {"name": "'BorgyTime!'",
+  "kCal": 232,
+  "lactose": true,
+  "gluten": false,
+     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/RedDot_Burger.jpg/800px-RedDot_Burger.jpg"
+    }
+    ,{
+    "name": "Feastere",
+  "kCal": 23,
+  "lactose": false,
+  "gluten": true,
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/NYC-Diner-Bacon-Cheeseburger.jpg/716px-NYC-Diner-Bacon-Cheeseburger.jpg"
+}
+]
